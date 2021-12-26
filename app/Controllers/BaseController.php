@@ -49,4 +49,16 @@ class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
+
+    protected function validar($tipo)
+    {
+        if ($this->validate($tipo) == FALSE)
+        {
+            $errores = $this->validator->getErrors();
+            echo json_encode(array("status" => false, "error" => 'Please review invalid fields!', "errores" => $errores ));
+            die();
+        }
+        else
+            return true;
+    }
 }

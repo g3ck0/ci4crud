@@ -40,4 +40,14 @@ class Validation
     //--------------------------------------------------------------------
     // Rules
     //--------------------------------------------------------------------
+    public $item_add = [
+        'Name' => ['label' => 'Name', 'rules' => 'required'],
+        'Description' => ['label' => 'Descripción', 'rules' => 'required']
+    ];
+
+    public $item_edit = [
+        'Id' => ['label' => 'Item', 'rules' => 'required'],
+        'Name' => ['label' => 'Name', 'rules' => 'required'],
+        'Description' => ['label' => 'Descripción', 'rules' => 'required']
+    ];
 }
